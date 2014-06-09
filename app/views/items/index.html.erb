@@ -1,0 +1,13 @@
+<%= form_for(@new_item, :url => '/items', method:'post') do |f| %>
+<%= f.label :something %>
+<%= f.text_field :name %>
+<%= f.number_field :price %>
+<%= f.submit "Go" %>
+<% end %>
+
+
+
+<% @items.each do |i| %>
+	<%= i.name %>
+	<%= i.price %>
+<% end %>
